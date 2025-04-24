@@ -17,6 +17,7 @@ builder.Services.AddControllers()  /*Esto me permite habilitar la funcionalidad 
 builder.Services.AddDbContext<AplicationDbContext>(opciones => opciones.UseSqlServer("name=DefaultConection")); /*Configuramos el dbcontext como servicio usando swlserver y
                                                                                                 //builder.Services.AddTransient<IRepoValores, RepoValoresInyeOracle>(); /*Esto permite inyectar el servicio de la 
                                                                                                 // * interfaz IRepoValores y la implementacion RepoValoresInyeORACLE*/
+//
 
 
 
