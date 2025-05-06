@@ -142,7 +142,8 @@
         ],
         "StatusCode": 200
       }
-    ]
+    ],
+    "EndpointName": "ObtenerAutor"
   },
   {
     "ContainingType": "BibliotecaApi.Controllers.AutoresController",
@@ -293,53 +294,8 @@
         ],
         "StatusCode": 200
       }
-    ]
-  },
-  {
-    "ContainingType": "BibliotecaApi.Controllers.ValoresControllers",
-    "Method": "Post",
-    "RelativePath": "api/valores",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "valor",
-        "Type": "BibliotecaApi.Entidades.Valor",
-        "IsRequired": true
-      }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BibliotecaApi.Controllers.ValoresControllers",
-    "Method": "Get",
-    "RelativePath": "api/valores",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.Entidades.Valor, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BibliotecaApi.Controllers.ValoresControllers",
-    "Method": "GetTiempoVida",
-    "RelativePath": "api/valores/TiempoVida",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "EndpointName": "ObtenerLibro"
   },
   {
     "ContainingType": "BibliotecaApi.Controllers.AutoresController",

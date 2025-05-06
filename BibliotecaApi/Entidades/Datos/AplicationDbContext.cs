@@ -8,6 +8,14 @@ namespace BibliotecaApi.Entidades.Datos
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Autor>().Property(a => a.nombre).HasMaxLength(150);
+            //modelBuilder.Entity<Libro>().Property(l => l.titulo).HasMaxLength(150);
+            base.OnModelCreating(modelBuilder);
+
+        }
+
         public DbSet<Autor> Autores{ get; set; }
 
         public DbSet<Libro> Libros { get; set; }

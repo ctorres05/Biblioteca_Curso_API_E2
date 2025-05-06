@@ -44,18 +44,18 @@ namespace BibliotecaApi.Controllers
         {
             return new List<Autor>
             {
-                new Autor { Id = 1, nombre = "Felipe"   , edad = 55},
-                new Autor { Id = 2, nombre = "Magui"    , edad = 51},
+                new Autor { Id = 1, nombres = "Felipe"   ,  apellido = "TORRES", identificacion = "abc",  edad = 55},
+                new Autor { Id = 2, nombres = "Magui"    ,  apellido = "TORRES", identificacion = "abc",  edad = 51},
             };
         }
 
 
-        [HttpGet("DameUno/{id:int}")]   /*La ruta seria  api/autores/DameUno/5    si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
+        [HttpGet("DameUno/{id:int}", Name = "ObtenerAutor")   ]   /*La ruta seria  api/autores/DameUno/5    si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
         public async Task<ActionResult<Autor>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
         {
             Autor autor;
 
-            if (incluyelibro)
+            if (!incluyelibro)
             {
                 autor = await contex.Autores
                     .Include(x => x.Libros)   /*Esto hace que me triga los libros relacionados al autor*/
@@ -81,7 +81,7 @@ namespace BibliotecaApi.Controllers
         {
             return await contex.Autores
                 .Include(x => x.Libros)
-                .Where(x => x.nombre.Contains(nombre)).ToListAsync();
+                .Where(x => x.nombres.Contains(nombre)).ToListAsync();
         }
 
         [HttpGet("Dame_con_param/{param1}/{param2?}")]
@@ -98,7 +98,8 @@ namespace BibliotecaApi.Controllers
         {
             contex.Add(autor);
             await contex.SaveChangesAsync();
-            return Ok();
+            //return Ok();
+            return CreatedAtRoute("ObtenerAutor", new { id = autor.Id }, autor); /*Retorno el autor en el jeison para que me tome la modf*/
 
         }
 

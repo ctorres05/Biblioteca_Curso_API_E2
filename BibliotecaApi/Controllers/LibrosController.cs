@@ -25,7 +25,7 @@ namespace BibliotecaApi.Controllers
             return await context.Libros.ToListAsync();
         }
 
-        [HttpGet ("DameUno/{id:int}")]
+        [HttpGet ("DameUno/{id:int}", Name = "ObtenerLibro")]
         public async Task<ActionResult<Libro>> Get(int id)
         
         {
@@ -57,8 +57,10 @@ namespace BibliotecaApi.Controllers
 
             context.Add(libro);
             await context.SaveChangesAsync();
-            return Ok();
-        }
+            //return Ok();
+            return CreatedAtRoute("ObtenerLibro", new { id = libro.Id }, libro); /*Retorno el autor en el jeison para que me tome la modf*/
+        }   /*El CreatedAtRoute me permite retornar el libro creado y la ruta para obtenerlo, en este caso la ruta es ObtenerLibro*/
+        
 
         [HttpPut ("{id:int}")]
         public async Task<ActionResult> Put(Libro libro, int id)
