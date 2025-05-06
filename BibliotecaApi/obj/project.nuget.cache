@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cIbNvXLH67U=",
+  "dgSpecHash": "NZlPaq05y6c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\carlo\\source\\repos\\BibliotecaApi_E2\\BibliotecaApi\\BibliotecaApi.csproj",
+  "projectFilePath": "C:\\Users\\carlo\\OneDrive\\Documentos\\Programas NET\\Curso API\\Biblioteca_Curso_API_E2\\BibliotecaApi\\BibliotecaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
