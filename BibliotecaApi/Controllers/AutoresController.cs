@@ -21,10 +21,7 @@ namespace BibliotecaApi.Controllers
         [HttpGet]
         public async Task<IEnumerable<Autor>> Get()
         {                
-
             return await contex.Autores.ToListAsync();
-
-
         }
 
         [HttpGet("DamePrimero")]  /* entra con --> api/autotrds/DamePrimero  */

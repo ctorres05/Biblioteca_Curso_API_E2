@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BibliotecaApi.Entidades
 {
     public class Autor 
-    {
+    { 
         public int Id { get; set; }
 
         [Required       (ErrorMessage = "El campo {0} no puede ser nulo")]
