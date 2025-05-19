@@ -134,7 +134,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BibliotecaApi.Entidades.Autor",
+        "Type": "BibliotecaApi.DTOs.AutorDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -296,6 +296,46 @@
       }
     ],
     "EndpointName": "ObtenerLibro"
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.AutoresController",
+    "Method": "GetDTO",
+    "RelativePath": "autoresDTOs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.DTOs.AutorDTO, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.AutoresController",
+    "Method": "GetDTOM",
+    "RelativePath": "autoresDTOsM",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.DTOs.AutorDTO, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "BibliotecaApi.Controllers.AutoresController",

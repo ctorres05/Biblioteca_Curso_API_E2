@@ -486,3 +486,4 @@ C:\Users\carlo\Source\Repos\Biblioteca_Curso_API_E2\BibliotecaApi\obj\Debug\net9
 C:\Users\carlo\Source\Repos\Biblioteca_Curso_API_E2\BibliotecaApi\obj\Debug\net9.0\BibliotecaApi.pdb
 C:\Users\carlo\Source\Repos\Biblioteca_Curso_API_E2\BibliotecaApi\obj\Debug\net9.0\BibliotecaApi.genruntimeconfig.cache
 C:\Users\carlo\Source\Repos\Biblioteca_Curso_API_E2\BibliotecaApi\obj\Debug\net9.0\ref\BibliotecaApi.dll
+C:\Users\carlo\Source\Repos\Biblioteca_Curso_API_E2\BibliotecaApi\bin\Debug\net9.0\AutoMapper.dll

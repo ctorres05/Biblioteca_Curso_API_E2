@@ -1,4 +1,6 @@
-﻿using BibliotecaApi.Entidades;
+﻿using AutoMapper;
+using BibliotecaApi.DTOs;
+using BibliotecaApi.Entidades;
 using BibliotecaApi.Entidades.Datos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +12,12 @@ namespace BibliotecaApi.Controllers
     public class AutoresController : ControllerBase
     {
         private readonly AplicationDbContext contex;
-      
+        private readonly IMapper mapper;
 
-        public AutoresController(AplicationDbContext contex)  /*contructor*/
+        public AutoresController(AplicationDbContext contex, IMapper mapper)  /*contructor*/
         {
             this.contex = contex;
-          
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -23,6 +25,32 @@ namespace BibliotecaApi.Controllers
         {                
             return await contex.Autores.ToListAsync();
         }
+        [HttpGet("/autoresDTOsM")] /*Esto es a Manopla*/
+        public async Task<IEnumerable<AutorDTO>> GetDTOM()
+        {
+            //return await contex.Autores.ToListAsync();
+            var autores = await contex.Autores.ToListAsync();
+            var autorDTO = autores.Select(autor => 
+                                           new AutorDTO 
+                                                {
+                                                   Id = autor.Id,
+                                                   NombreCompleto = $"{autor.nombres} {autor.apellido} a mano"
+                                                }
+                                            );
+            return autorDTO;
+        }
+
+        [HttpGet("/autoresDTOs")] /*Esto es a Manopla*/
+        public async Task<IEnumerable<AutorDTO>> GetDTO()
+        {
+            //return await contex.Autores.ToListAsync();
+            var autores = await contex.Autores.ToListAsync();
+            var autorDTO = mapper.Map<IEnumerable<AutorDTO>>(autores);
+            return autorDTO;
+        }
+
+
+
 
         [HttpGet("DamePrimero")]  /* entra con --> api/autotrds/DamePrimero  */
         [HttpGet("/DamePrimero")] /* entra tambien con --> DamePrimero   */
@@ -47,10 +75,12 @@ namespace BibliotecaApi.Controllers
         }
 
 
-        [HttpGet("DameUno/{id:int}", Name = "ObtenerAutor")   ]   /*La ruta seria  api/autores/DameUno/5    si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
-        public async Task<ActionResult<Autor>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
+        [HttpGet("DameUno/{id:int}", Name = "ObtenerAutor")   ]   /*La ruta seria  api/autores/DameUno/5    
+                                                                   * si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
+        public async Task<ActionResult<AutorDTO>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
         {
             Autor autor;
+            AutorDTO autorDTO;
 
             if (!incluyelibro)
             {
@@ -68,8 +98,9 @@ namespace BibliotecaApi.Controllers
             {
                 return NotFound();
             }
+            autorDTO = mapper.Map<AutorDTO>(autor);
 
-            return Ok(autor);
+            return Ok(autorDTO);
         }
 
         [HttpGet("DameUno/{nombre:alpha}")]    /*Tengo dos DameUno uno que funciona con parametro entero busca uno en particular con su ID

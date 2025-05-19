@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "p+UewZmIOvs=",
+  "dgSpecHash": "69pZ23+QzxA=",
   "success": true,
   "projectFilePath": "C:\\Users\\carlo\\Source\\Repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\BibliotecaApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\carlo\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

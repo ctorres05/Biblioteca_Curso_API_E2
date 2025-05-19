@@ -19,7 +19,7 @@ builder.Services.AddDbContext<AplicationDbContext>(opciones => opciones.UseSqlSe
                                                                                                 // * interfaz IRepoValores y la implementacion RepoValoresInyeORACLE*/
 //
 
-
+builder.Services.AddAutoMapper(typeof(Program));
 
 var app = builder.Build();
 
