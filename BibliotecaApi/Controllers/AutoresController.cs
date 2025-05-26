@@ -122,8 +122,10 @@ namespace BibliotecaApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(Autor autor)
+        public async Task<ActionResult> Post(AutorCreacionDTO autorCreacionDTO)
         {
+            var autor = mapper.Map<Autor>(autorCreacionDTO);
+
             contex.Add(autor);
             await contex.SaveChangesAsync();
             //return Ok();
@@ -133,9 +135,12 @@ namespace BibliotecaApi.Controllers
 
         [HttpPut("{id:int}") ]
 
-        public async Task<ActionResult> Put(int id, Autor autor) 
+        public async Task<ActionResult> Put(int id, AutorCreacionDTO autorcreacionDTO) 
         {
-            if (id != autor.Id)   {  return BadRequest(); }
+           // if (id != autorcreacionDTO.Id)   {  return BadRequest(); }   con el DTO no tenemos que validar porque no lo tiene al campo id
+
+            var autor = mapper.Map<Autor>(autorcreacionDTO);
+            autor.Id = id;
 
             contex.Update(autor);
             await contex.SaveChangesAsync();

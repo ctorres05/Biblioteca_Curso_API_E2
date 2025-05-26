@@ -12,7 +12,7 @@ namespace BibliotecaApi.Utilidades
                 .ForMember(dto => dto.NombreCompleto,  
                     config => config.MapFrom(autor => $"{autor.nombres} {autor.apellido} Edad: {autor.edad}"));
 
-
+            CreateMap< AutorCreacionDTO, Autor>();
         } 
 
     }
