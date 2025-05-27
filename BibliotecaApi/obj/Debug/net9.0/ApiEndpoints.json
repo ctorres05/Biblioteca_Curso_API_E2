@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "autor",
-        "Type": "BibliotecaApi.Entidades.Autor",
+        "Name": "autorCreacionDTO",
+        "Type": "BibliotecaApi.DTOs.AutorCreacionDTO",
         "IsRequired": true
       }
     ],
@@ -49,8 +49,8 @@
         "IsRequired": true
       },
       {
-        "Name": "autor",
-        "Type": "BibliotecaApi.Entidades.Autor",
+        "Name": "autorcreacionDTO",
+        "Type": "BibliotecaApi.DTOs.AutorCreacionDTO",
         "IsRequired": true
       }
     ],
@@ -207,7 +207,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.Entidades.Libro, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.DTOs.LibroDTO, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

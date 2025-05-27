@@ -13,6 +13,12 @@ namespace BibliotecaApi.Utilidades
                     config => config.MapFrom(autor => $"{autor.nombres} {autor.apellido} Edad: {autor.edad}"));
 
             CreateMap< AutorCreacionDTO, Autor>();
+
+
+            CreateMap<Libro, LibroDTO>();
+
+            CreateMap<LibroCreacionDTO , Libro>();
+        
         } 
 
     }

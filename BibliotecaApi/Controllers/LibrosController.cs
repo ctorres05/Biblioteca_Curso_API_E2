@@ -1,4 +1,6 @@
-﻿using BibliotecaApi.Entidades;
+﻿using AutoMapper;
+using BibliotecaApi.DTOs;
+using BibliotecaApi.Entidades;
 using BibliotecaApi.Entidades.Datos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,32 +14,39 @@ namespace BibliotecaApi.Controllers
 
     public class LibrosController : ControllerBase
     {
-        private readonly AplicationDbContext context;   
-        public LibrosController(AplicationDbContext context)
+        private readonly AplicationDbContext context;
+        private readonly IMapper mapper;
+
+        public LibrosController(AplicationDbContext context, IMapper  mapper)
 
         {
             this.context = context;
-
+            this.mapper = mapper;
         }
         [HttpGet]
-        public async Task<IEnumerable<Libro>> Get()
+        public async Task<IEnumerable<LibroDTO>> Get()
         {
-            return await context.Libros.ToListAsync();
+
+            var libro = await context.Libros.ToListAsync();
+            var libroDTO = mapper.Map<IEnumerable<LibroDTO>>(libro) ;
+            return libroDTO;
         }
 
         [HttpGet ("DameUno/{id:int}", Name = "ObtenerLibro")]
-        public async Task<ActionResult<Libro>> Get(int id)
+        public async Task<ActionResult<LibroDTO>> Get(int id)
         
         {
             var libro = await context.Libros
                 .Include(x => x.Autor)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
+            var libroDTO = libro; 
+
             if (libro is null)
             {
                 return NotFound();
             }
-            return Ok(libro);
+            return Ok(libroDTO);
         }
         
 
