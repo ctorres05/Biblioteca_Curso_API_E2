@@ -25,6 +25,8 @@ namespace BibliotecaApi.Controllers
         {                
             return await contex.Autores.ToListAsync();
         }
+
+
         [HttpGet("/autoresDTOsM")] /*Esto es a Manopla*/
         public async Task<IEnumerable<AutorDTO>> GetDTOM()
         {
@@ -40,7 +42,7 @@ namespace BibliotecaApi.Controllers
             return autorDTO;
         }
 
-        [HttpGet("/autoresDTOs")] /*Esto es a Manopla*/
+        [HttpGet("/autoresDTOs")] /*Esto es con MAPPER*/
         public async Task<IEnumerable<AutorDTO>> GetDTO()
         {
             //return await contex.Autores.ToListAsync();
@@ -77,16 +79,17 @@ namespace BibliotecaApi.Controllers
 
         [HttpGet("DameUno/{id:int}", Name = "ObtenerAutor")   ]   /*La ruta seria  api/autores/DameUno/5    
                                                                    * si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
-        public async Task<ActionResult<AutorDTO>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
+        public async Task<ActionResult<AutorConLibroDTO>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
         {
             Autor autor;
-            AutorDTO autorDTO;
+            
 
-            if (!incluyelibro)
+            if (incluyelibro)
             {
                 autor = await contex.Autores
-                    .Include(x => x.Libros)   /*Esto hace que me triga los libros relacionados al autor*/
+                    .Include(x => x.Libros)  /*Esto hace que me triga los libros relacionados al autor*/
                     .FirstOrDefaultAsync(x => x.Id == id);
+                    
             }
             else
             {
@@ -98,9 +101,9 @@ namespace BibliotecaApi.Controllers
             {
                 return NotFound();
             }
-            autorDTO = mapper.Map<AutorDTO>(autor);
+            var autorConLibrosDTO = mapper.Map<AutorConLibroDTO>(autor);
 
-            return Ok(autorDTO);
+            return Ok(autorConLibrosDTO);
         }
 
         [HttpGet("DameUno/{nombre:alpha}")]    /*Tengo dos DameUno uno que funciona con parametro entero busca uno en particular con su ID

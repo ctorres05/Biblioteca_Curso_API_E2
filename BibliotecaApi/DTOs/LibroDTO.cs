@@ -8,6 +8,7 @@ namespace BibliotecaApi.DTOs
     {
         public int Id { get; set; }
         public required string titulo { get; set; }
-        
+
+       
     }
 }

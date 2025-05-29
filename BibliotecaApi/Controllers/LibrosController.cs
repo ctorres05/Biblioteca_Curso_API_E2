@@ -27,42 +27,46 @@ namespace BibliotecaApi.Controllers
         public async Task<IEnumerable<LibroDTO>> Get()
         {
 
-            var libro = await context.Libros.ToListAsync();
+            var libro = await context.Libros
+                .Include(x => x.Autor)
+                .ToListAsync();
             var libroDTO = mapper.Map<IEnumerable<LibroDTO>>(libro) ;
             return libroDTO;
         }
 
         [HttpGet ("DameUno/{id:int}", Name = "ObtenerLibro")]
-        public async Task<ActionResult<LibroDTO>> Get(int id)
+        public async Task<ActionResult<LibroConAutorDTO>> Get(int id)
         
         {
             var libro = await context.Libros
                 .Include(x => x.Autor)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
-            var libroDTO = libro; 
+            var libroConAutorDTO = mapper.Map<LibroConAutorDTO>(libro); 
 
             if (libro is null)
             {
                 return NotFound();
             }
-            return Ok(libroDTO);
+            return Ok(libroConAutorDTO);
         }
         
 
 
         [HttpPost]
-        public async Task<ActionResult> Post(Libro libro)
+        public async Task<ActionResult> Post(LibroCreacionDTO libroCreacionDTO)
         {
-            var existeautor = await context.Autores.AnyAsync(x => x.Id == libro.autorId);
+            var existeautor = await context.Autores.AnyAsync(x => x.Id == libroCreacionDTO.autorId);
 
             if (!existeautor)
             {
                 //return BadRequest("No existe el autor");
-                ModelState.AddModelError(nameof(libro.autorId), $"No existe el autor con el id {libro.autorId}"); /*Agregamos un error al modelo*/  
+                ModelState.AddModelError(nameof(libroCreacionDTO.autorId), $"No existe el autor con el id {libroCreacionDTO.autorId}"); /*Agregamos un error al modelo*/  
                 return ValidationProblem(); /*Retorna un 400 y el error que agregamos al modelo*/   
 
             }   
+            
+            var libro =  mapper.Map<Libro>(libroCreacionDTO);
 
             context.Add(libro);
             await context.SaveChangesAsync();
@@ -72,8 +76,12 @@ namespace BibliotecaApi.Controllers
         
 
         [HttpPut ("{id:int}")]
-        public async Task<ActionResult> Put(Libro libro, int id)
+        public async Task<ActionResult> Put(LibroCreacionDTO libroCreacionDTO, int id)
         {
+            var libro = mapper.Map<Libro>(libroCreacionDTO);
+            libro.Id = id;  /*Esto se hace porque el dto no tiene el ID y la clase Libro SI*/
+
+
             if (libro.Id != id)
             {
                 return BadRequest("El id del libro no coincide con el id de la URL");

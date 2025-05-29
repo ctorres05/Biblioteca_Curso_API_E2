@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public required string NombreCompleto    { get; set; }
         public int edad { get; set; }
-        public List<LibroDTO> Libros { get; set; } = [];
+       
         
     }
 }

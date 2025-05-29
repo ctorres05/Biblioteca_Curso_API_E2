@@ -134,7 +134,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BibliotecaApi.DTOs.AutorDTO",
+        "Type": "BibliotecaApi.DTOs.AutorConLibroDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -226,8 +226,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "libro",
-        "Type": "BibliotecaApi.Entidades.Libro",
+        "Name": "libroCreacionDTO",
+        "Type": "BibliotecaApi.DTOs.LibroCreacionDTO",
         "IsRequired": true
       }
     ],
@@ -242,8 +242,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "libro",
-        "Type": "BibliotecaApi.Entidades.Libro",
+        "Name": "libroCreacionDTO",
+        "Type": "BibliotecaApi.DTOs.LibroCreacionDTO",
         "IsRequired": true
       },
       {
@@ -286,7 +286,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BibliotecaApi.Entidades.Libro",
+        "Type": "BibliotecaApi.DTOs.LibroConAutorDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
