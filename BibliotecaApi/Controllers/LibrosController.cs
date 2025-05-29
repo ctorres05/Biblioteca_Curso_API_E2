@@ -50,7 +50,24 @@ namespace BibliotecaApi.Controllers
             }
             return Ok(libroConAutorDTO);
         }
-        
+
+        [HttpGet("BuscarPorTitulo")]
+        public async Task<ActionResult<IEnumerable<LibroDTO>>> GetPorTitulo([FromQuery] string titulo)
+        {
+            if (string.IsNullOrWhiteSpace(titulo))
+            {
+                return BadRequest("Debe proporcionar un título para buscar.");
+            }
+
+            var libros = await context.Libros
+                .Where(l => l.titulo.Contains(titulo)) // Puedes usar .ToLower().Contains(titulo.ToLower()) si quieres ignorar mayúsculas
+                .ToListAsync();
+
+            var libroDTOs = mapper.Map<IEnumerable<LibroDTO>>(libros);
+
+            return Ok(libroDTOs);
+        }
+
 
 
         [HttpPost]

@@ -272,6 +272,32 @@
   },
   {
     "ContainingType": "BibliotecaApi.Controllers.LibrosController",
+    "Method": "GetPorTitulo",
+    "RelativePath": "api/libros/BuscarPorTitulo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.DTOs.LibroDTO, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.LibrosController",
     "Method": "Get",
     "RelativePath": "api/libros/DameUno/{id}",
     "HttpMethod": "GET",
