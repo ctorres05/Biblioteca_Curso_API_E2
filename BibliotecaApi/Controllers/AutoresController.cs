@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using Azure;
 using BibliotecaApi.DTOs;
 using BibliotecaApi.Entidades;
 using BibliotecaApi.Entidades.Datos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace BibliotecaApi.Controllers
 {
@@ -148,7 +150,36 @@ namespace BibliotecaApi.Controllers
             contex.Update(autor);
             await contex.SaveChangesAsync();
 
-            return Ok(autor) ;  /*Retorno el autor en el jeison para que me tome la modf*/
+            //return Ok(autor) ;  /*Retorno el autor en el jeison para que me tome la modf*/
+            return NoContent();  //no retornan el recurso
+        }
+
+
+        [HttpPatch("{id:int}")]
+        public async Task<ActionResult> Patch(int id, JsonPatchDocument<AutorPatchDTO> patchdoc)
+        {
+
+            if (patchdoc is null) { return BadRequest(); }
+
+            var autorBD = await contex.Autores.FirstOrDefaultAsync(x => x.Id == id);
+            
+            if (autorBD is null) { return NotFound(); }
+
+            var autorpatchdto = mapper.Map<AutorPatchDTO>(autorBD);
+
+            patchdoc.ApplyTo(autorpatchdto, ModelState);
+
+            var esValido = TryValidateModel(autorpatchdto);
+            
+            if (!esValido) { return ValidationProblem(); }
+
+            mapper.Map(autorpatchdto, autorBD);
+
+            await contex.SaveChangesAsync();  /*Funciona asi por que  autorDB ya lo traje de la base de datos entonces ahi lo guarda*/
+
+
+
+            return NoContent();
 
         }
 
@@ -167,7 +198,9 @@ namespace BibliotecaApi.Controllers
             }
             contex.Remove(autor);
             await contex.SaveChangesAsync();
-            return Ok(registrosborrados);
+            //return Ok(registrosborrados);
+            return NoContent();
+
         }   
     }
 }

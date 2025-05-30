@@ -10,8 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 // *******  Area de servicios  ********
 
 builder.Services.AddControllers()  /*Esto me permite habilitar la funcionalidad de los controladores*/
-    .AddJsonOptions(opciones => opciones.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);   /*Esto evita referencias ciclicas*/
-    
+    .AddJsonOptions(opciones => opciones.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);   /*Esto evita referencias ciclicas
+                                                                                                                     si se usa DTO no es necesario utilizar esta se*/
+
+
+builder.Services.AddControllers().AddNewtonsoftJson();   /*para el uso de los metodos PATCH en los controladores*/
 
 
 builder.Services.AddDbContext<AplicationDbContext>(opciones => opciones.UseSqlServer("name=DefaultConection")); /*Configuramos el dbcontext como servicio usando swlserver y
