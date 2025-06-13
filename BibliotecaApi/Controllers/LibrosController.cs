@@ -29,7 +29,7 @@ namespace BibliotecaApi.Controllers
         {
 
             var libro = await context.Libros
-                .Include(x => x.Autor)
+                .Include(x => x.Autores)
                 .ToListAsync();
             var libroDTO = mapper.Map<IEnumerable<LibroDTO>>(libro);
             return libroDTO;
@@ -40,7 +40,7 @@ namespace BibliotecaApi.Controllers
 
         {
             var libro = await context.Libros
-                .Include(x => x.Autor)
+                .Include(x => x.Autores)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             var libroConAutorDTO = mapper.Map<LibroConAutorDTO>(libro);
@@ -74,7 +74,9 @@ namespace BibliotecaApi.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(LibroCreacionDTO libroCreacionDTO)
         {
-            var existeautor = await context.Autores.AnyAsync(x => x.Id == libroCreacionDTO.autorId);
+            var libro = mapper.Map<Libro>(libroCreacionDTO); /*Mapea el libroCreacionDTO a un objeto Libro*/
+
+            var existeautor = await context.Autores.AnyAsync(x => x.Id == 1 /*libro.autorId*/);
 
             if (!existeautor)
             {
@@ -84,7 +86,7 @@ namespace BibliotecaApi.Controllers
 
             }
 
-            var libro = mapper.Map<Libro>(libroCreacionDTO);
+           
 
             context.Add(libro);
             await context.SaveChangesAsync();

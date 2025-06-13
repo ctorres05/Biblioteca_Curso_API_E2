@@ -79,34 +79,34 @@ namespace BibliotecaApi.Controllers
         }
 
 
-        [HttpGet("DameUno/{id:int}", Name = "ObtenerAutor")   ]   /*La ruta seria  api/autores/DameUno/5    
-                                                                   * si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
-        public async Task<ActionResult<AutorConLibroDTO>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
-        {
-            Autor autor;
+        //[HttpGet("DameUno/{id:int}", Name = "ObtenerAutor")   ]   /*La ruta seria  api/autores/DameUno/5    
+        //                                                           * si es [Fromquery] --> api/autores/DameUno/5?incluyelibro= true */
+        //public async Task<ActionResult<AutorConLibroDTO>> Get([FromRoute] int id, [FromHeader] bool incluyelibro)
+        //{
+        //    Autor autor;
             
 
-            if (incluyelibro)
-            {
-                autor = await contex.Autores
-                    .Include(x => x.Libros)  /*Esto hace que me triga los libros relacionados al autor*/
-                    .FirstOrDefaultAsync(x => x.Id == id);
+        //    if (incluyelibro)
+        //    {
+        //        autor = await contex.Autores
+        //            .Include(x => x.Libros)  /*Esto hace que me triga los libros relacionados al autor*/
+        //            .FirstOrDefaultAsync(x => x.Id == id);
                     
-            }
-            else
-            {
-                autor = await contex.Autores
-                     .FirstOrDefaultAsync(x => x.Id == id);
+        //    }
+        //    else
+        //    {
+        //        autor = await contex.Autores
+        //             .FirstOrDefaultAsync(x => x.Id == id);
 
-            }
-            if (autor is null)
-            {
-                return NotFound();
-            }
-            var autorConLibrosDTO = mapper.Map<AutorConLibroDTO>(autor);
+        //    }
+        //    if (autor is null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var autorConLibrosDTO = mapper.Map<AutorConLibroDTO>(autor);
 
-            return Ok(autorConLibrosDTO);
-        }
+        //    return Ok(autorConLibrosDTO);
+        //}
 
         [HttpGet("DameUno/{nombre:alpha}")]    /*Tengo dos DameUno uno que funciona con parametro entero busca uno en particular con su ID
                                                 * y otro que busca una cadena en el campo nombre*/

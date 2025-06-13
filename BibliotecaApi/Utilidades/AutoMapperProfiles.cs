@@ -29,9 +29,9 @@ namespace BibliotecaApi.Utilidades
 
             CreateMap<Libro, LibroPatchDTO>().ReverseMap(); /*significa que el mapeo va en ambos sentidos*/
 
-            CreateMap<Libro, LibroConAutorDTO>()
-                .ForMember(dto => dto.autornombre,
-                     config => config.MapFrom(a => MapearNombreYApellidoAutorParaLibro(a.Autor!)));
+            //CreateMap<Libro, LibroConAutorDTO>()
+            //    .ForMember(dto => dto.autornombre,
+            //        config => config.MapFrom(a => MapearNombreYApellidoAutorParaLibro(a.Autor!)));
 
             
             

@@ -11,8 +11,10 @@ namespace BibliotecaApi.Entidades
         [PrimeraLetraMayuscula]
         [StringLength(150, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
         public required string titulo { get; set; }
-        public int autorId { get; set; }
-        public Autor? Autor { get; set; }    
+        //public int autorId { get; set; }
+        // public Autor? Autor { get; set; }    
+        public List<AutorLibro>? Autores { get; set; } = []; // Inicializar la lista para evitar null reference exceptions
+
         public List<Comentario> Comentarios { get; set; } = []; 
 
     }

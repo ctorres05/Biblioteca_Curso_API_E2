@@ -29,7 +29,9 @@ namespace BibliotecaApi.Entidades
         [Url]
         public string? Url { get; set; }
 
-       public List<Libro> Libros { get; set; } = new List<Libro>();
+        public List<AutorLibro> Libros { get; set; } = [];
+
+
 
 
 

@@ -22,6 +22,7 @@ namespace BibliotecaApi.Entidades.Datos
 
         public DbSet<Comentario> Comentarios { get; set; }
 
+        public DbSet<AutorLibro> AutoresLibros { get; set; }
 
 
 
