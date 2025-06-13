@@ -123,7 +123,7 @@ namespace BibliotecaApi.Controllers
 
             var libroBD = await context.Libros.FirstOrDefaultAsync(x => x.Id == id);
             
-            if (libroBD is null) { return NotFound(); }
+            if (libroBD is null) { return NotFound($"libro {id} no existe"); }
 
             var libroPatchDTO = mapper.Map<LibroPatchDTO>(libroBD);
 
@@ -145,7 +145,28 @@ namespace BibliotecaApi.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
-          
+
+            var existe = await context.Libros.AnyAsync(x => x.Id == id);    
+
+            if (!existe)
+            {
+                return NotFound($"No existe un libro con el ID {id}.");
+            }
+            
+            
+            var regborrado = await context.Libros
+                .Where(x => x.Id == id)
+                .ExecuteDeleteAsync(); // Ejecuta un borrado directo en la base de datos sin necesidad de traer el objeto completo  
+            
+            
+            if (regborrado == 0)
+            {
+                return NotFound($"No se pudo borrar el libro con el ID {id}.");
+            }   
+            return NoContent(); // Retorna un 204 No Content, indicando que la operación se realizó correctamente sin retornar contenido 
+
+
+            /*
             var libro = await context.Libros.FirstOrDefaultAsync(x => x.Id == id);
             
             if (libro is null)
@@ -157,6 +178,8 @@ namespace BibliotecaApi.Controllers
             await context.SaveChangesAsync();
             // return Ok(libro);
             return NoContent();
+
+            */
         }   
     }
 }

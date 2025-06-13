@@ -19,6 +19,8 @@ namespace BibliotecaApi.Utilidades
             CreateMap< AutorCreacionDTO, Autor>();
 
             CreateMap< Autor, AutorPatchDTO>().ReverseMap(); /*significa que el mapeo va en ambos sentidos*/
+
+
             
 
             CreateMap<Libro, LibroDTO>();
@@ -30,9 +32,21 @@ namespace BibliotecaApi.Utilidades
             CreateMap<Libro, LibroConAutorDTO>()
                 .ForMember(dto => dto.autornombre,
                      config => config.MapFrom(a => MapearNombreYApellidoAutorParaLibro(a.Autor!)));
+
+            
+            
+            
+            CreateMap<ComentarioCreacionDTO, Comentario>(); 
+            
+            CreateMap<Comentario, ComentarioDTO>();
+
+            CreateMap<ComentarioPatchDTO, Comentario>().ReverseMap();
+
+                
+
         }
 
-        
+
         private string MapearNombreYApellidoAutor(Autor autor) => $"{autor.nombres} {autor.apellido} Edad: {autor.edad}";
         /*Esta es una funcion que le entra como parametro un autor y retorna un string concatenado el nombre + el apellido y la edad*/
         private string MapearNombreYApellidoAutorParaLibro(Autor autor) => $"{autor.apellido} {autor.nombres} ";

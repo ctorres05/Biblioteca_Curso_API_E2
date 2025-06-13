@@ -3,48 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\libropatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\libropatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\controllers\\libroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\controllers\\comentarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\controllers\\comentarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\comentariocreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\comentariocreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\utilidades\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\utilidades\\automapperprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\librocreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\librocreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\comentariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\comentariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\autordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\autordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\autorpatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\autorpatchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\dtos\\autorcreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\dtos\\autorcreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|c:\\users\\carlo\\source\\repos\\biblioteca_curso_api_e2\\bibliotecaapi\\entidades\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD9E4967-0951-4976-88C4-4973A1C214CE}|BibliotecaApi\\BibliotecaApi.csproj|solutionrelative:bibliotecaapi\\entidades\\comentario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,151 +53,78 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LibroPAtchDTO.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\LibroPAtchDTO.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\LibroPAtchDTO.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\LibroPAtchDTO.cs",
-              "RelativeToolTip": "BibliotecaApi\\DTOs\\LibroPAtchDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "LibrosController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Controllers\\LibrosController.cs",
+              "RelativeDocumentMoniker": "BibliotecaApi\\Controllers\\LibrosController.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Controllers\\LibrosController.cs",
+              "RelativeToolTip": "BibliotecaApi\\Controllers\\LibrosController.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAvwKEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T20:34:43.321Z",
+              "WhenOpened": "2025-06-11T19:51:08.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LibroCreacionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\LibroCreacionDTO.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\LibroCreacionDTO.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\LibroCreacionDTO.cs",
-              "RelativeToolTip": "BibliotecaApi\\DTOs\\LibroCreacionDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "ComentarioCreacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\ComentarioCreacionDTO.cs",
+              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\ComentarioCreacionDTO.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\ComentarioCreacionDTO.cs",
+              "RelativeToolTip": "BibliotecaApi\\DTOs\\ComentarioCreacionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T20:34:13.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AutorDTO.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\AutorDTO.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\AutorDTO.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\AutorDTO.cs",
-              "RelativeToolTip": "BibliotecaApi\\DTOs\\AutorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T16:08:10.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Libro.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Entidades\\Libro.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\Entidades\\Libro.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Entidades\\Libro.cs",
-              "RelativeToolTip": "BibliotecaApi\\Entidades\\Libro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T16:07:30.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AutoMapperProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
-              "RelativeToolTip": "BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBsAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T15:02:14.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AutoresController.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Controllers\\AutoresController.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\Controllers\\AutoresController.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Controllers\\AutoresController.cs",
-              "RelativeToolTip": "BibliotecaApi\\Controllers\\AutoresController.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAiwMMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:57:29.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T21:08:30.777Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AutorPatchDTO.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\AutorPatchDTO.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\AutorPatchDTO.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\AutorPatchDTO.cs",
-              "RelativeToolTip": "BibliotecaApi\\DTOs\\AutorPatchDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Title": "ComentarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\ComentarioDTO.cs",
+              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\ComentarioDTO.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\ComentarioDTO.cs",
+              "RelativeToolTip": "BibliotecaApi\\DTOs\\ComentarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:56:57.908Z",
+              "WhenOpened": "2025-06-02T21:09:09.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ComentariosController.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Controllers\\ComentariosController.cs",
+              "RelativeDocumentMoniker": "BibliotecaApi\\Controllers\\ComentariosController.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Controllers\\ComentariosController.cs",
+              "RelativeToolTip": "BibliotecaApi\\Controllers\\ComentariosController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAIwBkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T20:00:55.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AutorCreacionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\AutorCreacionDTO.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\DTOs\\AutorCreacionDTO.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\DTOs\\AutorCreacionDTO.cs",
-              "RelativeToolTip": "BibliotecaApi\\DTOs\\AutorCreacionDTO.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "Comentario.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Entidades\\Comentario.cs",
+              "RelativeDocumentMoniker": "BibliotecaApi\\Entidades\\Comentario.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Entidades\\Comentario.cs",
+              "RelativeToolTip": "BibliotecaApi\\Entidades\\Comentario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:55:54.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T19:50:25.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "BibliotecaApi\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\appsettings.Development.json",
-              "RelativeToolTip": "BibliotecaApi\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-30T14:54:45.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\appsettings.json",
-              "RelativeDocumentMoniker": "BibliotecaApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\appsettings.json",
-              "RelativeToolTip": "BibliotecaApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-30T14:54:42.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Program.cs",
-              "RelativeDocumentMoniker": "BibliotecaApi\\Program.cs",
-              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Program.cs",
-              "RelativeToolTip": "BibliotecaApi\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AutoMapperProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
+              "RelativeDocumentMoniker": "BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
+              "ToolTip": "C:\\Users\\carlo\\source\\repos\\Biblioteca_Curso_API_E2\\BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
+              "RelativeToolTip": "BibliotecaApi\\Utilidades\\AutoMapperProfiles.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T14:54:10.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T15:02:14.801Z"
             }
           ]
         }

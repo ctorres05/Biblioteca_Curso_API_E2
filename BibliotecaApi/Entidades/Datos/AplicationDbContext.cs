@@ -20,6 +20,10 @@ namespace BibliotecaApi.Entidades.Datos
 
         public DbSet<Libro> Libros { get; set; }
 
+        public DbSet<Comentario> Comentarios { get; set; }
+
+
+
 
     }
 }
