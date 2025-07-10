@@ -100,19 +100,31 @@ namespace BibliotecaApi.Controllers
            
 
             var libro = mapper.Map<Libro>(libroCreacionDTO); /*Mapea el libroCreacionDTO a un objeto Libro*/
+            AsignarOrdenAutores(libro); /*Asignamos el orden a los autores*/
 
-                     
+
 
             context.Add(libro);
             await context.SaveChangesAsync();
 
             
-
+            --var libroDTO = Mapper.Map<LibroDTO>(libro); /*Mapea el libro a un objeto LibroDTO para retornar en la respuesta*/ç
 
             //return Ok();
-            return CreatedAtRoute("ObtenerLibro", new { id = libro.Id }, libro); /*Retorno el autor en el jeison para que me tome la modf*/
+            return CreatedAtRoute("ObtenerLibro", new { id = libro.Id }, libroDTO); /*Retorno el autor en el jeison para que me tome la modf*/
             /*El CreatedAtRoute me permite retornar el libro creado y la ruta para obtenerlo, en este caso la ruta es ObtenerLibro*/
 
+        }
+
+        private void AsignarOrdenAutores(Libro libro)
+        {
+            if (libro.Autores is not null)
+            {
+                for (int i = 0; i < libro.Autores.Count; i++)
+                {
+                    libro.Autores[i].Orden = i ; /*Asignamos el orden a los autores*/
+                }
+            }
         }
 
         [HttpPut("{id:int}")]
