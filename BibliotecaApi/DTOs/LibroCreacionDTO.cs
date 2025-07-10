@@ -11,9 +11,9 @@ namespace BibliotecaApi.DTOs
         [PrimeraLetraMayuscula]
         [StringLength(150, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
         public required string titulo { get; set; }
-        public int autorId { get; set; }
-      
+        public List<int> autoresId { get; set; } = []; // Inicializar la lista para evitar null reference exceptions    
 
-       
+
+
     }
 }

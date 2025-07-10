@@ -74,26 +74,46 @@ namespace BibliotecaApi.Controllers
         [HttpPost]
         public async Task<ActionResult> Post(LibroCreacionDTO libroCreacionDTO)
         {
-            var libro = mapper.Map<Libro>(libroCreacionDTO); /*Mapea el libroCreacionDTO a un objeto Libro*/
-
-            var existeautor = await context.Autores.AnyAsync(x => x.Id == 1 /*libro.autorId*/);
-
-            if (!existeautor)
+            if (libroCreacionDTO.autoresId is null || libroCreacionDTO.autoresId.Count == 0)
             {
-                //return BadRequest("No existe el autor");
-                ModelState.AddModelError(nameof(libroCreacionDTO.autorId), $"No existe el autor con el id {libroCreacionDTO.autorId}"); /*Agregamos un error al modelo*/
+                ModelState.AddModelError(nameof(libroCreacionDTO.autoresId), "No se puede crear un libro sin autores."); /*Agregamos un error al modelo*/
                 return ValidationProblem(); /*Retorna un 400 y el error que agregamos al modelo*/
+            }
 
+            //var existeautor = await context.Autores.AnyAsync(x => x.Id == 1 /*libro.autorId*/);
+            var existeautores = await context.Autores
+                .Where(x => libroCreacionDTO.autoresId.Contains(x.Id))
+                .Select(x => x.Id)
+                .ToListAsync(); /*Trae los autores que existen en la base de datos y los guarda en una lista*/
+
+            var lista_autoresfaltantes   = libroCreacionDTO.autoresId.Except(existeautores).ToList();
+
+
+            //if (existeautores.Count != libroCreacionDTO.autoresId.Count)
+            if(lista_autoresfaltantes.Count > 0) /*Si hay autores que no existen en la base de datos*/
+            {
+                var idsFaltantes = string.Join(", ", lista_autoresfaltantes); /*Convierte la lista de ids faltantes a un string separado por comas*/
+                ModelState.AddModelError(nameof(libroCreacionDTO.autoresId), $"Los siguientes autores no existen: {idsFaltantes}"); /*Agregamos un error al modelo*/
+                return ValidationProblem(); /*Retorna un 400 y el error que agregamos al modelo*/
             }
 
            
 
+            var libro = mapper.Map<Libro>(libroCreacionDTO); /*Mapea el libroCreacionDTO a un objeto Libro*/
+
+                     
+
             context.Add(libro);
             await context.SaveChangesAsync();
+
+            
+
+
             //return Ok();
             return CreatedAtRoute("ObtenerLibro", new { id = libro.Id }, libro); /*Retorno el autor en el jeison para que me tome la modf*/
-        }   /*El CreatedAtRoute me permite retornar el libro creado y la ruta para obtenerlo, en este caso la ruta es ObtenerLibro*/
+            /*El CreatedAtRoute me permite retornar el libro creado y la ruta para obtenerlo, en este caso la ruta es ObtenerLibro*/
 
+        }
 
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(LibroCreacionDTO libroCreacionDTO, int id)
